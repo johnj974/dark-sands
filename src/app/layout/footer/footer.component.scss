@@ -3,6 +3,24 @@ footer {
   background-color: $color-dark;
 }
 
-h4 {
+h3 {
   font-weight: 200;
+  padding-bottom: 1.5rem;
+}
+
+a {
+  color: $color-light;
+
+  :hover {
+    color: $color-green;
+  }
+}
+
+p {
+  color: $color-light;
+  font-size: 1.8rem;
+}
+
+img {
+  border: 2px solid $color-green;
 }
