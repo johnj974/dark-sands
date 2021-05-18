@@ -1,6 +1,6 @@
 import { NgModule } from '@angular/core';
 import { RouterModule, Routes } from '@angular/router';
-
+//.
 const routes: Routes = [
   {
     path: 'attractions',
@@ -15,6 +15,11 @@ const routes: Routes = [
       import('./business/business.module').then((m) => m.BusinessModule),
   },
   {
+    path: 'contact',
+    loadChildren: () =>
+      import('./contact/contact.module').then((m) => m.ContactModule),
+  },
+  {
     path: 'dining',
     loadChildren: () =>
       import('./dining/dining.module').then((m) => m.DiningModule),
@@ -22,6 +27,11 @@ const routes: Routes = [
   {
     path: '',
     loadChildren: () => import('./home/home.module').then((m) => m.HomeModule),
+  },
+  {
+    path: 'rooms',
+    loadChildren: () =>
+      import('./rooms/rooms.module').then((m) => m.RoomsModule),
   },
   {
     path: 'spa',
