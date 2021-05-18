@@ -23,4 +23,42 @@ p {
 
 img {
   border: 2px solid $color-green;
+  margin-top: 4rem;
+}
+
+.copyright-section {
+  margin-top: 2rem;
+}
+
+.media-links {
+  display: flex;
+  flex-direction: column;
+  padding-left: 0;
+  margin-bottom: 0;
+  list-style: none;
+
+  & li {
+    margin-bottom: 1rem;
+  }
+}
+
+.covid-compliance {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+@media only screen and (max-width: 768px) {
+  .media-links {
+    flex-direction: row;
+
+    & li {
+      margin: 0rem auto;
+    }
+  }
+  .center-box {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+  }
 }
