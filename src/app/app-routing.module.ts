@@ -3,6 +3,10 @@ import { RouterModule, Routes } from '@angular/router';
 //.
 const routes: Routes = [
   {
+    path: '',
+    loadChildren: () => import('./home/home.module').then((m) => m.HomeModule),
+  },
+  {
     path: 'attractions',
     loadChildren: () =>
       import('./attractions/attractions.module').then(
@@ -23,10 +27,6 @@ const routes: Routes = [
     path: 'dining',
     loadChildren: () =>
       import('./dining/dining.module').then((m) => m.DiningModule),
-  },
-  {
-    path: '',
-    loadChildren: () => import('./home/home.module').then((m) => m.HomeModule),
   },
   {
     path: 'rooms',

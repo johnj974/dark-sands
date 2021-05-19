@@ -5,17 +5,22 @@ import { HomeRoutingModule } from './home-routing.module';
 import { MainHomeComponent } from './main-home/main-home.component';
 import { RoomsComponent } from './rooms/rooms.component';
 import { AttractionsComponent } from './attractions/attractions.component';
-
+import { DiningComponent } from './dining/dining.component';
+import { SpaComponent } from './spa/spa.component';
+import { WeddingComponent } from './wedding/wedding.component';
+import { BusinessComponent } from './business/business.component';
+import { RouterModule } from '@angular/router';
 
 @NgModule({
   declarations: [
     MainHomeComponent,
     RoomsComponent,
-    AttractionsComponent
+    AttractionsComponent,
+    DiningComponent,
+    SpaComponent,
+    WeddingComponent,
+    BusinessComponent,
   ],
-  imports: [
-    CommonModule,
-    HomeRoutingModule
-  ]
+  imports: [CommonModule, HomeRoutingModule, RouterModule],
 })
-export class HomeModule { }
+export class HomeModule {}
