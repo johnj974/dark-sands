@@ -1,3 +1,11 @@
-button {
+.btn {
   font-size: 2rem;
+  background-color: $color-green;
+  color: $color-light;
+  border: 1px solid $color-green;
+
+  &:hover {
+    //color: $color-green;
+    background-color: transparent;
+  }
 }
