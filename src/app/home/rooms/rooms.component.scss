@@ -9,10 +9,20 @@ section {
 }
 
 .text-container {
-  padding: 10rem;
+  padding: 2rem;
   color: $color-light;
 
   h2 {
     border-bottom: 1px solid $color-green;
   }
+}
+
+.picture-container {
+  border-left: 2px solid $color-light;
+}
+
+.col-lg-5 {
+  display: flex;
+  justify-content: center;
+  align-items: center;
 }
