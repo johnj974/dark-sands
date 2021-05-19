@@ -1,0 +1,18 @@
+@import "../../../styles/styles.scss";
+
+section {
+  margin: 3rem 0;
+}
+
+.fluid {
+  background-color: $color-dark;
+}
+
+.text-container {
+  padding: 10rem;
+  color: $color-light;
+
+  h2 {
+    border-bottom: 1px solid $color-green;
+  }
+}
