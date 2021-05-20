@@ -29,6 +29,11 @@ const routes: Routes = [
       import('./dining/dining.module').then((m) => m.DiningModule),
   },
   {
+    path: 'gallery',
+    loadChildren: () =>
+      import('./gallery/gallery.module').then((m) => m.GalleryModule),
+  },
+  {
     path: 'rooms',
     loadChildren: () =>
       import('./rooms/rooms.module').then((m) => m.RoomsModule),
