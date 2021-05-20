@@ -1,0 +1,70 @@
+@import "../../../styles/styles.scss";
+// This-----------------------------
+// .col-lg-2 {
+//   height: 40rem;
+// }
+// img {
+//   min-height: 100%;
+//   max-width: 100%;
+//   object-fit: cover;
+//   vertical-align: bottom;
+//   background-position: center;
+//   padding: 0;
+//   -webkit-filter: grayscale(100%); /* Safari 6.0 - 9.0 */
+//   filter: grayscale(100%);
+// }
+//----------------------------------------
+.col-lg-2 {
+  height: 40rem;
+}
+
+.nav {
+  min-height: 100%;
+  background-size: cover;
+  background-repeat: no-repeat;
+  background-position: center;
+  -webkit-filter: grayscale(100%);
+  filter: grayscale(100%);
+  font-weight: 300;
+  font-size: 3rem;
+
+  &:hover {
+    -webkit-filter: none;
+    filter: none;
+    font-weight: 400;
+  }
+}
+
+a {
+  color: $color-light;
+  text-decoration: none;
+}
+
+.center-box {
+  justify-content: center;
+  align-items: center;
+  display: flex;
+  width: 100%;
+}
+
+.explore {
+  background-image: url("../../../assets/images/explore.jpg");
+  z-index: 1;
+}
+
+.rooms {
+  background-image: url("../../../assets/images/room.jpg");
+}
+
+.contact {
+  background-image: url("../../../assets/images/room.jpg");
+}
+.dining {
+  background-image: url("../../../assets/images/explore.jpg");
+}
+.spa {
+  background-image: url("../../../assets/images/explore2.jpg");
+}
+.business {
+  background-image: url("../../../assets/images/explore3.jpg");
+}
