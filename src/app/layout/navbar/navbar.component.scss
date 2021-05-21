@@ -16,7 +16,6 @@
 
   & li a.active {
     color: $color-green;
-    //text-decoration: underline;
   }
 }
 
@@ -35,5 +34,9 @@ nav a::after {
 }
 
 nav a:hover::after {
+  width: 100%;
+}
+
+nav a:active::after {
   width: 100%;
 }

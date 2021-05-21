@@ -1,1 +1,15 @@
-<p>banner works!</p>
+<section>
+  <div class="row g-0">
+    <div class="col">
+      <div class="image-style">
+        <ng-content select="img"></ng-content>
+      </div>
+    </div>
+    <h1 class="text-center py-5 mb-0">
+      <ng-content select="h1"></ng-content>
+    </h1>
+    <p class="text-center py-5 mb-0">
+      <ng-content select="p"></ng-content>
+    </p>
+  </div>
+</section>

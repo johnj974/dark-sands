@@ -1,19 +1,4 @@
 @import "../../../styles/styles.scss";
-// This-----------------------------
-// .col-lg-2 {
-//   height: 40rem;
-// }
-// img {
-//   min-height: 100%;
-//   max-width: 100%;
-//   object-fit: cover;
-//   vertical-align: bottom;
-//   background-position: center;
-//   padding: 0;
-//   -webkit-filter: grayscale(100%); /* Safari 6.0 - 9.0 */
-//   filter: grayscale(100%);
-// }
-//----------------------------------------
 .col-lg-2 {
   height: 40rem;
 }
@@ -49,7 +34,6 @@ a {
 
 .explore {
   background-image: url("../../../assets/images/explore.jpg");
-  z-index: 1;
 }
 
 .rooms {
