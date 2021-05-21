@@ -1,13 +1,18 @@
+@import "../../../styles/helpers/variables";
+
 .image-style {
   max-height: 90vh;
   overflow: hidden;
   width: 100%;
+  background-position: bottom;
 }
 
 h1 {
-  color: red;
+  color: $color-dark;
+  text-transform: uppercase;
+  letter-spacing: 1rem;
 }
 
 p {
-  color: green;
+  color: $color-purple;
 }

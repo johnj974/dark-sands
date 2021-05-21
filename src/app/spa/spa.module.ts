@@ -3,15 +3,10 @@ import { CommonModule } from '@angular/common';
 
 import { SpaRoutingModule } from './spa-routing.module';
 import { MainSpaComponent } from './main-spa/main-spa.component';
-
+import { LayoutModule } from '../layout/layout.module';
 
 @NgModule({
-  declarations: [
-    MainSpaComponent
-  ],
-  imports: [
-    CommonModule,
-    SpaRoutingModule
-  ]
+  declarations: [MainSpaComponent],
+  imports: [CommonModule, SpaRoutingModule, LayoutModule],
 })
-export class SpaModule { }
+export class SpaModule {}

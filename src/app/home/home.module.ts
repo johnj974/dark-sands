@@ -10,6 +10,7 @@ import { SpaComponent } from './spa/spa.component';
 import { WeddingComponent } from './wedding/wedding.component';
 import { BusinessComponent } from './business/business.component';
 import { RouterModule } from '@angular/router';
+import { LayoutModule } from '../layout/layout.module';
 
 @NgModule({
   declarations: [
@@ -21,6 +22,6 @@ import { RouterModule } from '@angular/router';
     WeddingComponent,
     BusinessComponent,
   ],
-  imports: [CommonModule, HomeRoutingModule, RouterModule],
+  imports: [CommonModule, HomeRoutingModule, RouterModule, LayoutModule],
 })
 export class HomeModule {}
