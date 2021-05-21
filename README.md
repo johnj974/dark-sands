@@ -29,3 +29,6 @@ To get more help on the Angular CLI use `ng help` or go check out the [Angular C
 ## images
 
 Photo explore by Gabriela Palai from Pexels
+Photo wedding by Asad Photo Maldives from Pexels
+Photo dining by Valeria Boltneva from Pexels
+Photo spa by Nandhu Kumar from Pexels
