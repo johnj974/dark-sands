@@ -1,0 +1,40 @@
+@import "../../../styles/styles.scss";
+
+section {
+  //height: 800px;
+  background-color: $color-dark;
+  clip-path: polygon(100% 0, 100% 84%, 0 100%, 0 16%);
+  z-index: 1;
+  padding: 10rem 0;
+}
+
+form {
+  padding: 2rem 2rem;
+
+  label {
+    color: $color-dark;
+    padding-left: 0.9rem;
+    font-size: 1.3rem;
+    transition: all 0.3s;
+  }
+
+  input,
+  select,
+  textarea {
+    border: transparent;
+    //border-bottom: 2px solid $color-green;
+    font-size: 1.5rem;
+  }
+}
+
+input:placeholder-shown ~ label {
+  opacity: 0;
+  visibility: hidden;
+  transform: translateY(-4rem);
+}
+
+select:placeholder-shown ~ label {
+  opacity: 0;
+  visibility: hidden;
+  transform: translateY(-4rem);
+}

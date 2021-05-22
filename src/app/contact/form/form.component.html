@@ -1,0 +1,118 @@
+<section>
+  <div class="container">
+    <div class="row">
+      <div class="col-lg-6">
+        <div>
+          <form
+            (submit)="onSubmit()"
+            [formGroup]="contactForm"
+            autocomplete="off"
+          >
+            <div class="mb-3">
+              <input
+                type="text"
+                class="form-control"
+                id="name"
+                formControlName="name"
+                placeholder="Name"
+              />
+              <span
+                class="form-text small"
+                *ngIf="
+                  !contactForm.get('name').valid &&
+                  contactForm.get('name').touched
+                "
+              >
+                Please enter a valid name.
+              </span>
+              <label for="name" class="form-label">Name</label>
+            </div>
+
+            <div class="mb-3">
+              <input
+                type="email"
+                id="email"
+                formControlName="email"
+                class="form-control"
+                placeholder="E-mail"
+              />
+              <span
+                class="form-text small"
+                *ngIf="
+                  !contactForm.get('email').valid &&
+                  contactForm.get('email').touched
+                "
+              >
+                Please enter a valid email.
+              </span>
+              <label for="email" class="form-label">Email</label>
+            </div>
+
+            <div class="mb-3">
+              <input
+                type="text"
+                id="phone"
+                formControlName="phone"
+                class="form-control"
+                placeholder="Contact-Number"
+              />
+              <span
+                class="form-text small"
+                *ngIf="
+                  !contactForm.get('phone').valid &&
+                  contactForm.get('phone').touched
+                "
+              >
+                Please enter a valid phone.
+              </span>
+              <label for="phone" class="form-label">Contact-Number</label>
+            </div>
+
+            <div class="mb-3">
+              <input
+                type="text"
+                class="form-control"
+                id="subject"
+                formControlName="subject"
+                placeholder="Subject"
+              />
+              <span
+                class="form-text small"
+                *ngIf="
+                  !contactForm.get('subject').valid &&
+                  contactForm.get('subject').touched
+                "
+              >
+                Please enter a valid Subject.
+              </span>
+              <label for="subject" class="form-label">Subject</label>
+            </div>
+
+            <div class="mb-3">
+              <textarea
+                type="text"
+                class="form-control"
+                id="message"
+                formControlName="message"
+                placeholder="Message"
+                rows="6"
+              ></textarea>
+              <span
+                class="form-text small"
+                *ngIf="
+                  !contactForm.get('message').valid &&
+                  contactForm.get('message').touched
+                "
+              >
+                Please enter a valid message.
+              </span>
+              <!-- <label for="message" class="form-label">message</label> -->
+            </div>
+            <button class="btn">Submit</button>
+          </form>
+        </div>
+      </div>
+      <div class="col-lg-6">contact info</div>
+    </div>
+  </div>
+</section>
