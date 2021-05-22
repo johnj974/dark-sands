@@ -9,10 +9,10 @@ section {
 }
 
 form {
-  padding: 2rem 2rem;
+  padding: 2rem;
 
   label {
-    color: $color-dark;
+    color: $color-light;
     padding-left: 0.9rem;
     font-size: 1.3rem;
     transition: all 0.3s;
@@ -27,6 +27,16 @@ form {
   }
 }
 
+input.ng-invalid.ng-touched,
+textarea.ng-invalid.ng-touched {
+  border-bottom: 2px solid #ff0000;
+}
+
+input.ng-valid.ng-touched,
+textarea.ng-valid.ng-touched {
+  border-bottom: 2px solid $color-green;
+}
+
 input:placeholder-shown ~ label {
   opacity: 0;
   visibility: hidden;
@@ -37,4 +47,24 @@ select:placeholder-shown ~ label {
   opacity: 0;
   visibility: hidden;
   transform: translateY(-4rem);
+}
+
+.contact-info-box {
+  color: $color-light;
+  padding: 1rem 2rem;
+}
+
+@media only screen and (max-width: 990px) {
+  section {
+    clip-path: none;
+    padding: 5rem 0;
+  }
+
+  .button-box {
+    text-align: center;
+  }
+
+  .btn {
+    width: 50%;
+  }
 }

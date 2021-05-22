@@ -34,4 +34,12 @@ section {
     display: flex;
     flex-flow: column-reverse;
   }
+
+  .button-box {
+    text-align: center;
+  }
+
+  .btn {
+    width: 50%;
+  }
 }
