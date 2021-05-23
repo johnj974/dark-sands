@@ -25,6 +25,12 @@ section {
   align-items: center;
 }
 
+img {
+  max-height: 50rem;
+  overflow: hidden;
+  width: 100%;
+}
+
 @media only screen and (max-width: 990px) {
   .picture-container {
     border-left: none;

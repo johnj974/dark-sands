@@ -16,6 +16,8 @@
                 formControlName="name"
                 placeholder="Name"
               />
+
+              <label for="name" class="form-label">Name</label>
               <span
                 class="form-text small"
                 *ngIf="
@@ -23,9 +25,8 @@
                   contactForm.get('name').touched
                 "
               >
-                Please enter a valid name.
+                -Please enter a valid name.
               </span>
-              <label for="name" class="form-label">Name</label>
             </div>
 
             <div class="mb-3">
@@ -36,6 +37,8 @@
                 class="form-control"
                 placeholder="E-mail"
               />
+
+              <label for="email" class="form-label">Email</label>
               <span
                 class="form-text small"
                 *ngIf="
@@ -43,9 +46,8 @@
                   contactForm.get('email').touched
                 "
               >
-                Please enter a valid email.
+                -Please enter a valid email.
               </span>
-              <label for="email" class="form-label">Email</label>
             </div>
 
             <div class="mb-3">
@@ -54,8 +56,9 @@
                 id="phone"
                 formControlName="phone"
                 class="form-control"
-                placeholder="Contact-Number"
+                placeholder="Phone No."
               />
+              <label for="phone" class="form-label">Phone No.</label>
               <span
                 class="form-text small"
                 *ngIf="
@@ -63,9 +66,8 @@
                   contactForm.get('phone').touched
                 "
               >
-                Please enter a valid 9 digit phone number
+                -Please enter a valid 9 digit phone number
               </span>
-              <label for="phone" class="form-label">Contact-Number</label>
             </div>
 
             <div class="mb-3">
@@ -76,6 +78,7 @@
                 formControlName="subject"
                 placeholder="Subject"
               />
+              <label for="subject" class="form-label">Subject</label>
               <span
                 class="form-text small"
                 *ngIf="
@@ -83,9 +86,8 @@
                   contactForm.get('subject').touched
                 "
               >
-                Please enter a valid Subject.
+                -Please enter a valid Subject.
               </span>
-              <label for="subject" class="form-label">Subject</label>
             </div>
 
             <div class="mb-3">
@@ -97,6 +99,7 @@
                 placeholder="Message"
                 rows="6"
               ></textarea>
+              <!-- <label for="message" class="form-label">message</label> -->
               <span
                 class="form-text small"
                 *ngIf="
@@ -104,9 +107,8 @@
                   contactForm.get('message').touched
                 "
               >
-                Please enter a valid message.
+                -Please enter a valid message.
               </span>
-              <!-- <label for="message" class="form-label">message</label> -->
             </div>
             <div class="button-box">
               <button class="btn">Submit</button>
@@ -124,8 +126,8 @@
           <br />
           <hr />
           <br />
-          <h4>Location:</h4>
-          <p>GPS Coordinates:</p>
+          <h3>Location</h3>
+          <p>GPS Coordinates</p>
           <p>Latitude: 35.374859</p>
           <p>Longitude: -8.75839249</p>
         </div>
