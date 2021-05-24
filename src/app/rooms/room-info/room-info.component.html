@@ -1,0 +1,15 @@
+<section>
+  <div class="container">
+    <div class="row" *ngFor="let room of roomsArray; let id = index">
+      <div class="col-lg-4">
+        <h2>{{ room.name }}</h2>
+      </div>
+      <div class="col-lg-8">
+        <img src="{{ room.image }}" alt="" />
+      </div>
+    </div>
+  </div>
+</section>
+
+<!--  flex-flow: column-reverse; -->
+<!-- flex-column-reverse -->
