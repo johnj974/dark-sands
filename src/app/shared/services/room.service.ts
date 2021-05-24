@@ -7,8 +7,9 @@ import { RoomModel } from '../models/room.model';
 export class RoomService {
   //.
   roomServiceArray: RoomModel[] = [
-    new RoomModel('room1', '/assets/images/room.jpg'),
-    new RoomModel('room2', '/assets/images/room.jpg'),
+    new RoomModel('Classic Rooms', '/assets/images/room.jpg'),
+    new RoomModel('Deluxe Rooms', '/assets/images/room2.jpg'),
+    new RoomModel('Family Rooms', '/assets/images/room.jpg'),
   ];
 
   retrieveRoomArray() {

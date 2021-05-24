@@ -1,8 +1,12 @@
 <section>
-  <div class="container">
-    <div class="row" *ngFor="let room of roomsArray; let id = index">
-      <div class="col-lg-4">
-        <h2>{{ room.name }}</h2>
+  <div class="container" *ngFor="let room of roomsArray; let id = index">
+    <div class="row" [class]="{ 'flex-row-reverse': id % 2 === 0 }">
+      <div class="col-lg-4 fluid">
+        <div class="text-container">
+          <a [routerLink]="[id, room.name]">
+            <h2>{{ room.name }}</h2>
+          </a>
+        </div>
       </div>
       <div class="col-lg-8">
         <img src="{{ room.image }}" alt="" />
@@ -10,6 +14,3 @@
     </div>
   </div>
 </section>
-
-<!--  flex-flow: column-reverse; -->
-<!-- flex-column-reverse -->
