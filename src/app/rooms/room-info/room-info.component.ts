@@ -1,4 +1,5 @@
 import { Component, OnInit } from '@angular/core';
+import { Router } from '@angular/router';
 import { RoomModel } from 'src/app/shared/models/room.model';
 import { RoomService } from 'src/app/shared/services/room.service';
 
@@ -10,9 +11,14 @@ import { RoomService } from 'src/app/shared/services/room.service';
 export class RoomInfoComponent implements OnInit {
   //.
   roomsArray: RoomModel[] = [];
-  constructor(private roomService: RoomService) {}
+  constructor(private roomService: RoomService, private router: Router) {}
 
   ngOnInit(): void {
     this.roomsArray = this.roomService.retrieveRoomArray();
+  }
+
+  navigate(id: number, name: string) {
+    const roomName = name.replace(/ /g, '');
+    this.router.navigate(['rooms', id, roomName]);
   }
 }

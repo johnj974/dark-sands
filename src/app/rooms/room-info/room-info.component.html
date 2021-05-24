@@ -3,7 +3,7 @@
     <div class="row" [class]="{ 'flex-row-reverse': id % 2 === 0 }">
       <div class="col-lg-4 fluid">
         <div class="text-container">
-          <a [routerLink]="[id, room.name]">
+          <a (click)="navigate(id, room.name)">
             <h2>{{ room.name }}</h2>
           </a>
         </div>

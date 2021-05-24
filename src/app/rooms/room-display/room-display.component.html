@@ -1,1 +1,26 @@
-<p>room-display works!</p>
+<app-banner>
+  <img src="{{ chosenRoom.image }}" alt="" class="img-fluid" />
+  <h1>{{ chosenRoom.name }}</h1>
+  <p>
+    Lorem ipsum dolor sit amet consectetur adipisicing elit. Placeat quia
+    blanditiis officiis ipsa asperiores culpa veniam accusamus error modi sunt
+    beatae provident tempore exercitationem nobis eligendi, velit repellendus.
+    Vero, libero?
+  </p>
+</app-banner>
+<section>
+  <div class="container">
+    <div class="row">
+      <div class="col-lg-6">
+        <div class="image-container">
+          <img src="{{ chosenRoom.image }}" alt="" />
+        </div>
+      </div>
+      <div class="col-lg-6">
+        <div *ngFor="let feature of chosenRoomFeatureArray" class="features">
+          <p><i class="{{ feature.icon }} fa-2x"></i> {{ feature.name }}</p>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
