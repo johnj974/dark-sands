@@ -1,11 +1,37 @@
 @import "../../../styles/styles.scss";
 
+.container {
+  padding: 5rem 0rem 0rem 0rem;
+}
+
 .features {
   color: $color-purple;
+  padding: 0rem 2rem;
 }
 
 .image-container img {
-  max-height: 50rem;
+  //max-height: 80rem;
+  height: 55rem;
   overflow: hidden;
   width: 100%;
+}
+
+.room-links {
+  padding: 2rem 0rem;
+}
+
+.text-container {
+  padding: 2rem;
+  color: $color-purple;
+
+  h2 {
+    border-bottom: 1px solid $color-green;
+    margin-bottom: 0;
+  }
+}
+
+.col-lg-4 {
+  display: flex;
+  justify-content: center;
+  align-items: center;
 }

@@ -10,15 +10,48 @@
 </app-banner>
 <section>
   <div class="container">
-    <div class="row">
+    <div class="row g-0">
       <div class="col-lg-6">
         <div class="image-container">
           <img src="{{ chosenRoom.image }}" alt="" />
         </div>
       </div>
       <div class="col-lg-6">
-        <div *ngFor="let feature of chosenRoomFeatureArray" class="features">
-          <p><i class="{{ feature.icon }} fa-2x"></i> {{ feature.name }}</p>
+        <div class="features">
+          <h2>Room Amenities</h2>
+          <h4>For added comfort we provide the following</h4>
+          <p>
+            Lorem ipsum dolor sit amet consectetur adipisicing elit. Perferendis
+            dolorum praesentium in optio, sequi aspernatur, illo fugit maxime
+            eum, laboriosam non id vitae corporis?
+          </p>
+
+          <div *ngFor="let feature of chosenRoomFeatureArray">
+            <p><i class="{{ feature.icon }} fa-2x"></i> {{ feature.name }}</p>
+          </div>
+        </div>
+      </div>
+    </div>
+    <div class="row room-links">
+      <div class="col-lg-4">
+        <div class="text-container">
+          <a (click)="navigate()">
+            <h2>Classic Rooms</h2>
+          </a>
+        </div>
+      </div>
+      <div class="col-lg-4">
+        <div class="text-container">
+          <a (click)="navigate()">
+            <h2>Deluxe Rooms</h2>
+          </a>
+        </div>
+      </div>
+      <div class="col-lg-4">
+        <div class="text-container">
+          <a (click)="navigate()">
+            <h2>Family Rooms</h2>
+          </a>
         </div>
       </div>
     </div>

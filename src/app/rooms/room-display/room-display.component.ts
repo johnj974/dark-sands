@@ -25,4 +25,6 @@ export class RoomDisplayComponent implements OnInit {
       this.chosenRoomFeatureArray = this.chosenRoom.features;
     });
   }
+
+  navigate() {}
 }
