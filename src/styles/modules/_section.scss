@@ -15,9 +15,13 @@ section {
   }
 }
 
-// .picture-container {
-//   border-right: 2px solid $color-light;
-// }
+.right-picture {
+  border-left: 2px solid $color-light;
+}
+
+.left-picture {
+  border-right: 2px solid $color-light;
+}
 
 .col-lg-5 {
   display: flex;
@@ -32,9 +36,15 @@ img {
 }
 
 @media only screen and (max-width: 990px) {
-  // .picture-container {
-  //   border-right: none;
-  // }
+  .picture-container {
+    border-left: none;
+  }
+
+  .row {
+    display: flex;
+    flex-flow: column-reverse;
+  }
+
   .button-box {
     text-align: center;
   }

@@ -1,0 +1,31 @@
+<section *ngFor="let section of homePageArray; let id = index">
+  <div class="fluid">
+    <div class="row g-0" [class]="{ 'flex-row-reverse': id % 2 === 0 }">
+      <div class="col-lg-7">
+        <div [class]="id % 2 === 0 ? 'right-picture' : 'left-picture'">
+          <img
+            src="{{ section.image }}"
+            alt="{{ section.title }}"
+            class="img-fluid"
+          />
+        </div>
+      </div>
+      <div class="col-lg-5">
+        <div class="text-container">
+          <h2>{{ section.title }}</h2>
+          <p>
+            {{ section.description }}
+          </p>
+          <div class="button-box">
+            <button
+              class="btn btn-success"
+              (click)="navigateToPage(section.link)"
+            >
+              {{ section.buttonText }}
+            </button>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>

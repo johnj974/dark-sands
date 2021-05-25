@@ -11,6 +11,7 @@ import { WeddingComponent } from './wedding/wedding.component';
 import { BusinessComponent } from './business/business.component';
 import { RouterModule } from '@angular/router';
 import { LayoutModule } from '../layout/layout.module';
+import { HomeDisplayComponent } from './home-display/home-display.component';
 
 @NgModule({
   declarations: [
@@ -21,6 +22,7 @@ import { LayoutModule } from '../layout/layout.module';
     SpaComponent,
     WeddingComponent,
     BusinessComponent,
+    HomeDisplayComponent,
   ],
   imports: [CommonModule, HomeRoutingModule, RouterModule, LayoutModule],
 })
