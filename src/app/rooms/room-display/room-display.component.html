@@ -33,24 +33,10 @@
       </div>
     </div>
     <div class="row room-links">
-      <div class="col-lg-4">
+      <div class="col-lg-4" *ngFor="let room of roomsArray; let id = index">
         <div class="text-container">
-          <a (click)="navigate()">
-            <h2>Classic Rooms</h2>
-          </a>
-        </div>
-      </div>
-      <div class="col-lg-4">
-        <div class="text-container">
-          <a (click)="navigate()">
-            <h2>Deluxe Rooms</h2>
-          </a>
-        </div>
-      </div>
-      <div class="col-lg-4">
-        <div class="text-container">
-          <a (click)="navigate()">
-            <h2>Family Rooms</h2>
+          <a (click)="navigate(id, room.name)">
+            <h2>{{ room.name }}</h2>
           </a>
         </div>
       </div>

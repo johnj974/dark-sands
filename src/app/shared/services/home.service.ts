@@ -19,7 +19,7 @@ export class HomeService {
       '/assets/images/explore2.jpg',
       'Lorem ipsum dolor, sit amet consectetur adipisicing elit. Delectusdoloremque eius ducimus obcaecati explicabo optio adipiscivoluptate, repellendus quibusdam illo veniam ab a ad officiis cumdebitis cupiditate numquam tempore.',
       'Explore',
-      'attractions'
+      'explore'
     ),
     new HomeModel(
       'Your Special Day',

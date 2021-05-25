@@ -25,7 +25,7 @@
   color: $color-purple;
 
   h2 {
-    border-bottom: 1px solid $color-green;
+    border-bottom: 1px solid $color-purple;
     margin-bottom: 0;
   }
 }
@@ -34,4 +34,24 @@
   display: flex;
   justify-content: center;
   align-items: center;
+}
+
+a {
+  text-decoration: none;
+  //color: $color-light;
+  cursor: pointer;
+}
+
+a::after {
+  content: "";
+  display: block;
+  height: 3px;
+  width: 100%;
+  background-color: $color-purple;
+  width: 0%;
+  transition: all ease-in-out 250ms;
+}
+
+a:hover::after {
+  width: 100%;
 }

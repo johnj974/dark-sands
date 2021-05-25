@@ -1,5 +1,5 @@
 import { Component, OnInit } from '@angular/core';
-import { ActivatedRoute, Params } from '@angular/router';
+import { ActivatedRoute, Params, Router } from '@angular/router';
 import { Feature, RoomModel } from 'src/app/shared/models/room.model';
 import { RoomService } from 'src/app/shared/services/room.service';
 
@@ -12,9 +12,12 @@ export class RoomDisplayComponent implements OnInit {
   //.
   chosenRoom: RoomModel;
   chosenRoomFeatureArray: Feature[];
+  roomsArray: RoomModel[] = [];
+
   constructor(
     private roomService: RoomService,
-    private route: ActivatedRoute
+    private route: ActivatedRoute,
+    private router: Router
   ) {}
 
   ngOnInit(): void {
@@ -23,8 +26,12 @@ export class RoomDisplayComponent implements OnInit {
       const roomArray = this.roomService.retrieveRoomArray();
       this.chosenRoom = roomArray[params.id];
       this.chosenRoomFeatureArray = this.chosenRoom.features;
+      this.roomsArray = this.roomService.retrieveRoomArray();
     });
   }
 
-  navigate() {}
+  navigate(id: number, name: string) {
+    const roomName = name.replace(/ /g, '');
+    this.router.navigate(['rooms', id, roomName]);
+  }
 }
