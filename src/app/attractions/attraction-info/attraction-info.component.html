@@ -1,0 +1,15 @@
+<div class="section">
+  <div>
+    <div class="row g-0">
+      <div class="col-lg-4 col-md-6" *ngFor="let attraction of attractionArray">
+        <a routerLink="{{ attraction.link }}">
+          <div class="attraction {{ attraction.link }}">
+            <div class="center-box">
+              {{ attraction.link | titlecase }}
+            </div>
+          </div>
+        </a>
+      </div>
+    </div>
+  </div>
+</div>
