@@ -36,3 +36,6 @@ Photo castle by Felix Mittermeier from Pexels
 Photo church by Janez Podnar from Pexels
 Photo contact by chepté cormani from Pexels
 Photo by lalesh aldarwish from Pexels
+Photo kayak by Josh Hild from Pexels
+Photo monastery by Karen W Lim from Pexels
+Photo golf by 10 Star from Pexels

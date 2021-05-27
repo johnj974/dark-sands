@@ -11,7 +11,7 @@ export class AttractionService {
   attractionArray: AttractionModel[] = [
     new AttractionModel(
       'Wild Atlantic Drive',
-      '/assets/images/explore2.jpg',
+      '/assets/images/hills.jpg',
       'A Drive',
       'drive',
       'outdoor activities'

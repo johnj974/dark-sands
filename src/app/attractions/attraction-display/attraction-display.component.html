@@ -1,6 +1,6 @@
 <app-banner>
   <img src="{{ chosenAttraction.image }}" alt="" class="img-fluid" />
-  <h1>{{ chosenAttraction.name }}</h1>
+  <h1>{{ chosenAttraction.link | titlecase }}</h1>
   <p>
     Lorem ipsum dolor sit amet consectetur adipisicing elit. Placeat quia
     blanditiis officiis ipsa asperiores culpa veniam accusamus error modi sunt
@@ -8,3 +8,40 @@
     Vero, libero?
   </p>
 </app-banner>
+<section>
+  <div class="container">
+    <div class="row">
+      <div
+        class="col-lg-4 col-md-6"
+        *ngFor="let attraction of attractionArray; let id = index"
+      >
+        <div class="text-container">
+          <a (click)="navigate(id, attraction.link)">
+            <h3>{{ attraction.link | titlecase }}</h3>
+          </a>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+<section>
+  <div
+    class="container"
+    *ngFor="let activity of activeAttraction; let id = index"
+  >
+    <div class="row" [class]="{ 'flex-row-reverse': id % 2 === 0 }">
+      <div class="col-lg-4 fluid">
+        <div class="text-container">
+          <a (click)="navigate(id, activity.name)">
+            <h2>{{ activity.name }}</h2>
+          </a>
+        </div>
+      </div>
+      <div class="col-lg-8">
+        <div class="image-container">
+          <img src="{{ activity.image }}" alt="" />
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
