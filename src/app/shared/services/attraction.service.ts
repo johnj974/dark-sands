@@ -6,6 +6,7 @@ import { AttractionModel } from '../models/attraction.model';
 })
 export class AttractionService {
   //.
+  //-kayaking, walking, mountain-biking, sightseeing, cliff-jumping, golf, historical monuments
 
   attractionArray: AttractionModel[] = [
     new AttractionModel(
@@ -13,35 +14,35 @@ export class AttractionService {
       '/assets/images/explore2.jpg',
       'A Drive',
       'drive',
-      'explore'
+      'outdoor activities'
     ),
     new AttractionModel(
       'Wilderness Walk',
       '/assets/images/church.jpg',
       'A walk',
       'walk',
-      'rooms'
+      'heritage'
     ),
     new AttractionModel(
       'Wild Atlantic Drive',
       '/assets/images/explore2.jpg',
       'A Drive',
       'drive',
-      'dining'
+      'wild atlantic drive'
     ),
     new AttractionModel(
       'Wilderness Walk',
       '/assets/images/church.jpg',
       'A walk',
       'walk',
-      'weddings'
+      'golf'
     ),
     new AttractionModel(
       'Wild Atlantic Drive',
       '/assets/images/explore2.jpg',
       'A Drive',
       'drive',
-      'spa'
+      'social'
     ),
     new AttractionModel(
       'Wilderness Walk',

@@ -16,6 +16,12 @@
   }
 }
 
+.border-overlay {
+  //border: 3px solid $color-dark;
+  padding: 20px;
+  height: 40rem;
+}
+
 a {
   color: $color-light;
   text-decoration: none;
@@ -32,23 +38,23 @@ a {
   height: 40rem;
 }
 
-.explore {
+.activities {
   background-image: url("../../../assets/images/explore.jpg");
 }
 
-.rooms {
+.heritage {
   background-image: url("../../../assets/images/room.jpg");
 }
 
-.dining {
+.drive {
   background-image: url("../../../assets/images/dining.jpg");
 }
-.spa {
+.golf {
   background-image: url("../../../assets/images/spa.jpg");
 }
 .business {
   background-image: url("../../../assets/images/business.jpg");
 }
-.weddings {
+.social {
   background-image: url("../../../assets/images/church.jpg");
 }

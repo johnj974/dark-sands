@@ -1,11 +1,16 @@
 <div class="section">
   <div>
     <div class="row g-0">
-      <div class="col-lg-4 col-md-6" *ngFor="let attraction of attractionArray">
-        <a routerLink="{{ attraction.link }}">
-          <div class="attraction {{ attraction.link }}">
-            <div class="center-box">
-              {{ attraction.link | titlecase }}
+      <div
+        class="col-lg-4 col-md-6"
+        *ngFor="let attraction of attractionArray; let id = index"
+      >
+        <a (click)="navigate(id, attraction.link)">
+          <div class="border-overlay">
+            <div class="attraction {{ attraction.link }}">
+              <div class="center-box">
+                {{ attraction.link | titlecase }}
+              </div>
             </div>
           </div>
         </a>
