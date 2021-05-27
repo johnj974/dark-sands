@@ -1,0 +1,26 @@
+<section>
+  <div class="container">
+    <app-banner>
+      <img src="{{ retrievedActivity.image }}" alt="" class="img-fluid" />
+      <h1>{{ retrievedActivity.name }}</h1>
+      <p>
+        Lorem ipsum dolor sit amet consectetur adipisicing elit. Placeat quia
+        blanditiis officiis ipsa asperiores culpa veniam accusamus error modi
+        sunt beatae provident tempore exercitationem nobis eligendi, velit
+        repellendus. Vero, libero?
+      </p>
+    </app-banner>
+    <div class="row">
+      <div
+        class="col-lg-4 col-md-6"
+        *ngFor="let activity of activityArray; let id = index"
+      >
+        <div class="text-container">
+          <a>
+            <h3>{{ activity.name | titlecase }}</h3>
+          </a>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>

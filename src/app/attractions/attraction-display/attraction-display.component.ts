@@ -37,4 +37,9 @@ export class AttractionDisplayComponent implements OnInit {
     const attractionName = name.replace(/ /g, '');
     this.router.navigate(['explore', id, attractionName]);
   }
+
+  toActivity(id: number, name: string) {
+    const activityName = name.replace(/ /g, '');
+    this.router.navigate([id, activityName], { relativeTo: this.route });
+  }
 }

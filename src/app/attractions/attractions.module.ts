@@ -6,9 +6,10 @@ import { MainAttractionsComponent } from './main-attractions/main-attractions.co
 import { LayoutModule } from '../layout/layout.module';
 import { AttractionInfoComponent } from './attraction-info/attraction-info.component';
 import { AttractionDisplayComponent } from './attraction-display/attraction-display.component';
+import { AttractionChosenComponent } from './attraction-chosen/attraction-chosen.component';
 
 @NgModule({
-  declarations: [MainAttractionsComponent, AttractionInfoComponent, AttractionDisplayComponent],
+  declarations: [MainAttractionsComponent, AttractionInfoComponent, AttractionDisplayComponent, AttractionChosenComponent],
   imports: [CommonModule, AttractionsRoutingModule, LayoutModule],
 })
 export class AttractionsModule {}

@@ -32,7 +32,7 @@
     <div class="row" [class]="{ 'flex-row-reverse': id % 2 === 0 }">
       <div class="col-lg-4 fluid">
         <div class="text-container">
-          <a (click)="navigate(id, activity.name)">
+          <a (click)="toActivity(id, activity.name)">
             <h2>{{ activity.name }}</h2>
           </a>
         </div>

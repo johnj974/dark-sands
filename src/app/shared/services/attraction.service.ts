@@ -18,21 +18,21 @@ export class AttractionService {
     ),
     new AttractionModel(
       'Wilderness Walk',
-      '/assets/images/church.jpg',
+      '/assets/images/castle.jpg',
       'A walk',
       'walk',
       'heritage'
     ),
     new AttractionModel(
       'Wild Atlantic Drive',
-      '/assets/images/explore2.jpg',
+      '/assets/images/coast.jpg',
       'A Drive',
       'drive',
-      'wild atlantic drive'
+      'coastal drive'
     ),
     new AttractionModel(
       'Wilderness Walk',
-      '/assets/images/church.jpg',
+      '/assets/images/golf3.jpg',
       'A walk',
       'walk',
       'golf'
@@ -49,7 +49,7 @@ export class AttractionService {
       '/assets/images/church.jpg',
       'A walk',
       'walk',
-      'business'
+      'volcano tour'
     ),
   ];
   constructor() {}
