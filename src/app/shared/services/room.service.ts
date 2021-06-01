@@ -28,11 +28,9 @@ export class RoomService {
     new RoomModel('Family Rooms', '/assets/images/room.jpg', [
       { icon: 'fa fa-coffee', name: 'Tea and Coffee making' },
       { icon: 'fa fa-tv', name: 'Satellite TV' },
-      { icon: 'fa fa-bed', name: 'Double Bed' },
-      { icon: 'fa fa-bed', name: 'Three Single Beds' },
+      { icon: 'fa fa-bed', name: 'Double Bed + Three Single Beds' },
       { icon: 'fa fa-wifi', name: 'WiFi' },
       { icon: 'fa fa-bath', name: 'Ensuite Shower and Bath' },
-
       { icon: 'fa fa-phone', name: 'Direct Line Telephone' },
       { icon: 'fa fa-gamepad', name: 'Game Console' },
       { icon: 'fa fa-puzzle-piece', name: 'Board Games' },

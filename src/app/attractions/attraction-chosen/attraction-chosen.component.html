@@ -11,16 +11,7 @@
       </p>
     </app-banner>
     <div class="row">
-      <div
-        class="col-lg-4 col-md-6"
-        *ngFor="let activity of activityArray; let id = index"
-      >
-        <div class="text-container">
-          <a>
-            <h3>{{ activity.name | titlecase }}</h3>
-          </a>
-        </div>
-      </div>
+      <p>{{ retrievedActivity.description }}</p>
     </div>
   </div>
 </section>

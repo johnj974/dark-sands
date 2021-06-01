@@ -8,7 +8,7 @@
     Vero, libero?
   </p>
 </app-banner>
-<section>
+<section class="activities">
   <div class="container">
     <div class="row">
       <div
@@ -26,7 +26,7 @@
 </section>
 <section>
   <div
-    class="container"
+    class="container py-4"
     *ngFor="let activity of activeAttraction; let id = index"
   >
     <div class="row" [class]="{ 'flex-row-reverse': id % 2 === 0 }">

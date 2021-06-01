@@ -1,5 +1,5 @@
 import { Component, OnInit } from '@angular/core';
-import { ActivatedRoute, Params } from '@angular/router';
+import { ActivatedRoute, Params, Router } from '@angular/router';
 import { ActivityModel } from 'src/app/shared/models/activity.model';
 import { ActivityService } from 'src/app/shared/services/activity.service';
 
@@ -12,7 +12,8 @@ export class AttractionChosenComponent implements OnInit {
   //.
   constructor(
     private route: ActivatedRoute,
-    private activityService: ActivityService
+    private activityService: ActivityService,
+    private router: Router
   ) {}
 
   retrievedActivity: ActivityModel;
@@ -26,6 +27,7 @@ export class AttractionChosenComponent implements OnInit {
       );
       this.retrievedActivity = this.activityArray[params.id];
       console.log(this.retrievedActivity);
+      console.log(this.activityArray);
     });
   }
 }
