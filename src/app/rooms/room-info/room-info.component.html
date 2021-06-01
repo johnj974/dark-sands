@@ -1,6 +1,6 @@
 <section>
   <div class="container" *ngFor="let room of roomsArray; let id = index">
-    <div class="row" [class]="{ 'flex-row-reverse': id % 2 === 0 }">
+    <div class="row g-0" [class]="{ 'flex-row-reverse': id % 2 === 0 }">
       <div class="col-lg-4 fluid">
         <div class="text-container">
           <a (click)="navigate(id, room.name)">

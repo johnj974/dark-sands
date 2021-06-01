@@ -29,7 +29,7 @@
     class="container py-4"
     *ngFor="let activity of activeAttraction; let id = index"
   >
-    <div class="row" [class]="{ 'flex-row-reverse': id % 2 === 0 }">
+    <div class="row g-0" [class]="{ 'flex-row-reverse': id % 2 === 0 }">
       <div class="col-lg-4 fluid">
         <div class="text-container">
           <a (click)="toActivity(id, activity.name)">

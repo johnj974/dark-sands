@@ -2,38 +2,8 @@
   <div class="row g-0">
     <div class="col">
       <ul>
-        <li>
-          <img src="../../../assets/images/castle.jpg" alt="" />
-        </li>
-
-        <li>
-          <img src="../../../assets/images/explore.jpg" alt="" />
-        </li>
-        <li>
-          <img src="../../../assets/images/explore2.jpg" alt="" />
-        </li>
-
-        <li>
-          <img src="../../../assets/images/room.jpg" alt="" />
-        </li>
-        <li>
-          <img src="../../../assets/images/dining.jpg" alt="" />
-        </li>
-        <li>
-          <img src="../../../assets/images/spa.jpg" alt="" />
-        </li>
-        <li>
-          <img src="../../../assets/images/wedding.jpg" alt="" />
-        </li>
-
-        <li>
-          <img src="../../../assets/images/church.jpg" alt="" />
-        </li>
-        <li>
-          <img src="../../../assets/images/ring.jpg" alt="" />
-        </li>
-        <li>
-          <img src="../../../assets/images/room2.jpg" alt="" />
+        <li *ngFor="let name of photoGallery">
+          <img src="/assets/images/{{ name }}.jpg" alt="" />
         </li>
       </ul>
     </div>
