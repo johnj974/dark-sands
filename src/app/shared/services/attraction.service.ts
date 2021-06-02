@@ -39,14 +39,14 @@ export class AttractionService {
     ),
     new AttractionModel(
       'Wild Atlantic Drive',
-      '/assets/images/explore2.jpg',
+      '/assets/images/dining.jpg',
       'A Drive',
       'drive',
       'social'
     ),
     new AttractionModel(
       'Wilderness Walk',
-      '/assets/images/church.jpg',
+      '/assets/images/volcano.jpg',
       'A walk',
       'walk',
       'volcano tour'

@@ -40,3 +40,4 @@ Photo kayak by Josh Hild from Pexels
 Photo monastery by Karen W Lim from Pexels
 Photo golf by 10 Star from Pexels
 Photo golf3 by Tom Piotrowski from Pexels
+Photo volcano by Archie Binamira from Pexels
