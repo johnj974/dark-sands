@@ -8,7 +8,7 @@ const routes: Routes = [
   { path: '', component: MainAttractionsComponent },
   { path: ':id/:attraction', component: AttractionDisplayComponent },
   {
-    path: ':id/:attraction/:id/:activity',
+    path: ':id/:attraction/:activityId/:activity',
     component: AttractionChosenComponent,
   },
 ];

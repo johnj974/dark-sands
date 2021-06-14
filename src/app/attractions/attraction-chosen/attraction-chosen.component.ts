@@ -30,4 +30,11 @@ export class AttractionChosenComponent implements OnInit {
       console.log(this.activityArray);
     });
   }
+
+  returnToExplore() {
+    this.route.params.subscribe((params) => {
+      console.log(params);
+      this.router.navigate(['/explore', params.id, params.attraction]);
+    });
+  }
 }

@@ -1,5 +1,7 @@
 import { Component, OnInit } from '@angular/core';
-import { Router } from '@angular/router';
+import { ActivatedRoute, Params, Router } from '@angular/router';
+import { RestaurantModel } from 'src/app/shared/models/restaurant.model';
+import { RestaurantService } from 'src/app/shared/services/restaurant.service';
 
 @Component({
   selector: 'app-restaurant-home',
@@ -8,9 +10,23 @@ import { Router } from '@angular/router';
 })
 export class RestaurantHomeComponent implements OnInit {
   //.
-  constructor(private router: Router) {}
 
-  ngOnInit(): void {}
+  requestedRestaurant: RestaurantModel;
+
+  constructor(
+    private router: Router,
+    private route: ActivatedRoute,
+    private restaurantService: RestaurantService
+  ) {}
+
+  ngOnInit(): void {
+    this.route.params.subscribe((params: Params) => {
+      console.log(params);
+      this.requestedRestaurant = this.restaurantService.getRestaurant(
+        params.id
+      );
+    });
+  }
 
   backToRestaurant() {
     this.router.navigate(['/dining']);

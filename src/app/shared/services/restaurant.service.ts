@@ -9,16 +9,31 @@ export class RestaurantService {
   constructor() {}
 
   restaurantArray: RestaurantModel[] = [
-    new RestaurantModel("Joe's Steak House", 'All Things Meat', 'Steak House'),
-    new RestaurantModel("Jackie's Noodles", 'All things Oriental', 'Noodles'),
+    new RestaurantModel(
+      "Joe's Steak House",
+      'All Things Meat',
+      'Steak House',
+      '/assets/images/volcano.jpg'
+    ),
+    new RestaurantModel(
+      "Jackie's Noodles",
+      'All things Oriental',
+      'Noodles',
+      '/assets/images/volcano.jpg'
+    ),
     new RestaurantModel(
       'Marios Italian Cuisine',
       'All Things Italian',
-      'Mario'
+      'Mario',
+      '/assets/images/volcano.jpg'
     ),
   ];
 
   getRestaurantArray() {
     return this.restaurantArray.slice();
+  }
+
+  getRestaurant(id) {
+    return this.restaurantArray[id];
   }
 }
