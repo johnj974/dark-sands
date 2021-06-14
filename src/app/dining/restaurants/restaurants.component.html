@@ -1,1 +1,3 @@
-<p *ngFor="let restaurant of restaurants">{{ restaurant.title }}</p>
+<p *ngFor="let restaurant of restaurants; let id = index">
+  <a (click)="toRestaurant(id, restaurant.title)">{{ restaurant.title }}</a>
+</p>
