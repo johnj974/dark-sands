@@ -1,3 +1,4 @@
-<p>restaurant-home works!</p>
 <button class="btn" (click)="backToRestaurant()">back</button>
-<p>{{ requestedRestaurant.title }}</p>
+<section [class]="requestedRestaurant.style">
+  <h1>{{ requestedRestaurant.title }}</h1>
+</section>

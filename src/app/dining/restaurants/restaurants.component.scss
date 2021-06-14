@@ -1,8 +1,5 @@
 @import "../../../styles/helpers/variables";
-
-.fluid {
-  background-color: $color-dark;
-}
+@import "../../../styles/helpers/restaurant";
 
 .text-container {
   padding: 2rem;
@@ -45,11 +42,3 @@ a:hover::after {
   overflow: hidden;
   width: 100%;
 }
-
-// .activities {
-//   background-color: $color-dark;
-//   margin-top: 1rem;
-// }
-// .activities .text-container {
-//   color: $color-light;
-// }

@@ -13,19 +13,22 @@ export class RestaurantService {
       "Joe's Steak House",
       'All Things Meat',
       'Steak House',
-      '/assets/images/volcano.jpg'
+      '/assets/images/volcano.jpg',
+      'steak'
     ),
     new RestaurantModel(
       "Jackie's Noodles",
       'All things Oriental',
       'Noodles',
-      '/assets/images/volcano.jpg'
+      '/assets/images/volcano.jpg',
+      'noodle'
     ),
     new RestaurantModel(
       'Marios Italian Cuisine',
       'All Things Italian',
       'Mario',
-      '/assets/images/volcano.jpg'
+      '/assets/images/volcano.jpg',
+      'pizza'
     ),
   ];
 

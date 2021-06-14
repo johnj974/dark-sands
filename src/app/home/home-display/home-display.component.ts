@@ -17,7 +17,10 @@ export class HomeDisplayComponent implements OnInit {
     this.homePageArray = this.homeService.retrieveHomeArray();
   }
 
+  // navigateToPage(link: string) {
+  //   this.router.navigate([`${link}`]);
+  // }
   navigateToPage(link: string) {
-    this.router.navigate([`${link}`]);
+    this.router.navigate([link]);
   }
 }

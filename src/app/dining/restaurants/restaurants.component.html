@@ -4,7 +4,7 @@
     *ngFor="let restaurant of restaurants; let id = index"
   >
     <div class="row g-0" [class]="{ 'flex-row-reverse': id % 2 === 0 }">
-      <div class="col-lg-4 fluid">
+      <div class="col-lg-4" [class]="restaurant.style">
         <div class="text-container">
           <a (click)="toRestaurant(id, restaurant.title)">
             <h2>{{ restaurant.title }}</h2>
@@ -19,20 +19,3 @@
     </div>
   </div>
 </section>
-
-<!-- <section class="activities">
-  <div class="container">
-    <div class="row">
-      <div
-        class="col-lg-4 col-md-6"
-        *ngFor="let attraction of attractionArray; let id = index"
-      >
-        <div class="text-container">
-          <a (click)="navigate(id, attraction.link)">
-            <h3>{{ attraction.link | titlecase }}</h3>
-          </a>
-        </div>
-      </div>
-    </div>
-  </div>
-</section> -->

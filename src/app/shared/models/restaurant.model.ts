@@ -3,6 +3,7 @@ export class RestaurantModel {
     public title: string,
     public description: string,
     public link: string,
-    public image: string
+    public image: string,
+    public style: string
   ) {}
 }
