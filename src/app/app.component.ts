@@ -1,5 +1,5 @@
 import { Component, OnInit } from '@angular/core';
-import { ActivatedRoute, Params, Router } from '@angular/router';
+import { ActivatedRoute, NavigationEnd, Params, Router } from '@angular/router';
 
 @Component({
   selector: 'app-root',
@@ -18,8 +18,10 @@ export class AppComponent implements OnInit {
     this.route.params.subscribe((params: Params) => {
       console.log(params);
       console.log(this.router.url);
-      this.router.events.subscribe((data) => {
-        console.log(data);
+      this.router.events.subscribe((event: any) => {
+        if (event instanceof NavigationEnd) {
+          this.router.url === '/' ? (this.allow = false) : (this.allow = true);
+        }
       });
     });
   }

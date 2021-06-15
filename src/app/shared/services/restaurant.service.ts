@@ -86,8 +86,3 @@ export class RestaurantService {
     return this.restaurantArray[id];
   }
 }
-
-//  starters = {}[] = [
-//   {name: "soup", price: 6},
-//   {name: "chowder", price:7}
-// ]
