@@ -1,4 +1,5 @@
 import { Injectable } from '@angular/core';
+import { Subject } from 'rxjs';
 import { FoodModel } from '../models/food.model';
 import { RestaurantModel } from '../models/restaurant.model';
 
@@ -7,6 +8,8 @@ import { RestaurantModel } from '../models/restaurant.model';
 })
 export class RestaurantService {
   //.
+
+  envelope = new Subject<number>();
   constructor() {}
 
   restaurantArray: RestaurantModel[] = [

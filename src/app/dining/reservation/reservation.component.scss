@@ -1,0 +1,39 @@
+.reservation-form {
+  justify-content: center;
+  display: flex;
+  align-items: center;
+}
+
+form {
+  width: 80%;
+}
+
+input {
+  font-size: 1.6rem;
+  transition: all 0.3s;
+}
+
+label {
+  font-size: 1.2rem;
+}
+
+span {
+  float: right;
+  font-size: 1.2rem;
+}
+
+input.ng-invalid.ng-touched {
+  border-bottom: 2px solid red;
+}
+
+input:placeholder-shown ~ label {
+  opacity: 0;
+  visibility: hidden;
+  transform: translateY(-4rem);
+}
+
+select:placeholder-shown ~ label {
+  opacity: 0;
+  visibility: hidden;
+  transform: translateY(-4rem);
+}

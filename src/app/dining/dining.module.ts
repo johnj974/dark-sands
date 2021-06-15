@@ -7,15 +7,17 @@ import { LayoutModule } from '../layout/layout.module';
 import { RestaurantsComponent } from './restaurants/restaurants.component';
 import { RestaurantHomeComponent } from './restaurant-home/restaurant-home.component';
 import { RouterModule } from '@angular/router';
-import { FormsComponent } from './forms/forms.component';
 import { ReactiveFormsModule } from '@angular/forms';
+import { ReservationComponent } from './reservation/reservation.component';
+import { PickUpComponent } from './pick-up/pick-up.component';
 
 @NgModule({
   declarations: [
     MainDiningComponent,
     RestaurantsComponent,
     RestaurantHomeComponent,
-    FormsComponent,
+    ReservationComponent,
+    PickUpComponent,
   ],
   imports: [
     CommonModule,
