@@ -1,5 +1,5 @@
 import { Component, OnInit } from '@angular/core';
-import { ActivatedRoute, Params } from '@angular/router';
+import { ActivatedRoute, Params, Router } from '@angular/router';
 
 @Component({
   selector: 'app-root',
@@ -9,7 +9,7 @@ import { ActivatedRoute, Params } from '@angular/router';
 export class AppComponent implements OnInit {
   //.
 
-  constructor(private route: ActivatedRoute) {}
+  constructor(private route: ActivatedRoute, private router: Router) {}
 
   title = 'dark-sands';
   allow = true;
@@ -17,6 +17,10 @@ export class AppComponent implements OnInit {
   ngOnInit() {
     this.route.params.subscribe((params: Params) => {
       console.log(params);
+      console.log(this.router.url);
+      this.router.events.subscribe((data) => {
+        console.log(data);
+      });
     });
   }
 }
