@@ -27,5 +27,6 @@ export class ReservationComponent implements OnInit {
 
   makeReservation() {
     console.log(this.reservationForm.value);
+    this.reservationForm.reset();
   }
 }

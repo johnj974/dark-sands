@@ -1,4 +1,5 @@
-import { Component, OnInit } from '@angular/core';
+import { Component, Input, OnInit } from '@angular/core';
+import { FormControl, FormGroup } from '@angular/forms';
 import { RestaurantModel } from 'src/app/shared/models/restaurant.model';
 import { RestaurantService } from 'src/app/shared/services/restaurant.service';
 
@@ -10,13 +11,20 @@ import { RestaurantService } from 'src/app/shared/services/restaurant.service';
 export class PickUpComponent implements OnInit {
   //.
   restaurant: RestaurantModel;
+  orderForm: FormGroup;
+  @Input() receivedParamId: number;
 
   constructor(private restaurantService: RestaurantService) {}
 
   ngOnInit(): void {
-    this.restaurantService.envelope.subscribe((id: number) => {
-      this.restaurant = this.restaurantService.getRestaurant(id);
-      console.log(this.restaurant);
+    this.restaurant = this.restaurantService.getRestaurant(
+      this.receivedParamId
+    );
+
+    this.orderForm = new FormGroup({
+      name: new FormControl(null),
     });
+
+    console.log(this.receivedParamId);
   }
 }

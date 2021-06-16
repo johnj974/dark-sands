@@ -12,6 +12,7 @@ export class RestaurantHomeComponent implements OnInit {
   //.
 
   requestedRestaurant: RestaurantModel;
+  paramId: number;
 
   constructor(
     private router: Router,
@@ -22,6 +23,7 @@ export class RestaurantHomeComponent implements OnInit {
   ngOnInit(): void {
     this.route.params.subscribe((params: Params) => {
       console.log(params);
+      this.paramId = params.id;
       this.requestedRestaurant = this.restaurantService.getRestaurant(
         params.id
       );

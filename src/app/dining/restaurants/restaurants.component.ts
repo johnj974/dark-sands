@@ -25,6 +25,5 @@ export class RestaurantsComponent implements OnInit {
   toRestaurant(id: number, name: string) {
     const restaurantName = name.replace(/ /g, '');
     this.router.navigate([id, restaurantName], { relativeTo: this.route });
-    this.restaurantService.envelope.next(id);
   }
 }

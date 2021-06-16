@@ -1,1 +1,28 @@
-<p>pick-up works!</p>
+<section>
+  <div class="container">
+    <div class="row">
+      <div class="col">
+        <form [formGroup]="orderForm">
+          <select class="form-select">
+            <option>Starter</option>
+            <option *ngFor="let starter of restaurant.starter">
+              {{ starter.name }}
+            </option>
+          </select>
+          <select class="form-select">
+            <option>Main</option>
+            <option *ngFor="let main of restaurant.main">
+              {{ main.name }}
+            </option>
+          </select>
+          <select class="form-select">
+            <option>Desserts</option>
+            <option *ngFor="let dessert of restaurant.dessert">
+              {{ dessert.name }}
+            </option>
+          </select>
+        </form>
+      </div>
+    </div>
+  </div>
+</section>
