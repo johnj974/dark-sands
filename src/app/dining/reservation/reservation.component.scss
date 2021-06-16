@@ -9,12 +9,11 @@ form {
 }
 
 input {
-  font-size: 1.6rem;
-  transition: all 0.3s;
+  font-size: 1.5rem;
 }
 
 label {
-  font-size: 1.2rem;
+  font-size: 1.3rem;
 }
 
 span {
@@ -24,16 +23,4 @@ span {
 
 input.ng-invalid.ng-touched {
   border-bottom: 2px solid red;
-}
-
-input:placeholder-shown ~ label {
-  opacity: 0;
-  visibility: hidden;
-  transform: translateY(-4rem);
-}
-
-select:placeholder-shown ~ label {
-  opacity: 0;
-  visibility: hidden;
-  transform: translateY(-4rem);
 }

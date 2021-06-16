@@ -1,5 +1,5 @@
 import { Component, Input, OnInit } from '@angular/core';
-import { FormControl, FormGroup } from '@angular/forms';
+import { FormControl, FormGroup, Validators } from '@angular/forms';
 import { RestaurantModel } from 'src/app/shared/models/restaurant.model';
 import { RestaurantService } from 'src/app/shared/services/restaurant.service';
 
@@ -22,9 +22,18 @@ export class PickUpComponent implements OnInit {
     );
 
     this.orderForm = new FormGroup({
-      name: new FormControl(null),
+      orderName: new FormControl(null, Validators.required),
+      orderNumber: new FormControl(null, [
+        Validators.required,
+        Validators.pattern('[0-9]{10}'),
+      ]),
+      starterOrder: new FormControl(null),
+      mainOrder: new FormControl(null),
+      dessertOrder: new FormControl(null),
     });
+  }
 
-    console.log(this.receivedParamId);
+  placeOrder() {
+    console.log(this.orderForm);
   }
 }

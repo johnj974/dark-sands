@@ -20,8 +20,14 @@ export class ReservationComponent implements OnInit {
       bookingName: new FormControl(null, Validators.required),
       bookingTime: new FormControl(null, Validators.required),
       bookingDate: new FormControl(null, Validators.required),
-      bookingNumber: new FormControl(null, Validators.required),
-      bookingContact: new FormControl(null, Validators.required),
+      bookingNumber: new FormControl(null, [
+        Validators.required,
+        Validators.max(4),
+      ]),
+      bookingContact: new FormControl(null, [
+        Validators.required,
+        Validators.pattern('[0-9]{10}'),
+      ]),
     });
   }
 

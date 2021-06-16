@@ -2,26 +2,80 @@
   <div class="container">
     <div class="row">
       <div class="col">
-        <form [formGroup]="orderForm">
-          <select class="form-select">
-            <option>Starter</option>
-            <option *ngFor="let starter of restaurant.starter">
-              {{ starter.name }}
-            </option>
-          </select>
-          <select class="form-select">
-            <option>Main</option>
-            <option *ngFor="let main of restaurant.main">
-              {{ main.name }}
-            </option>
-          </select>
-          <select class="form-select">
-            <option>Desserts</option>
-            <option *ngFor="let dessert of restaurant.dessert">
-              {{ dessert.name }}
-            </option>
-          </select>
-        </form>
+        <h3>Pick Up</h3>
+        <div class="order-form">
+          <form [formGroup]="orderForm" (ngSubmit)="placeOrder()">
+            <div class="mb-3">
+              <label for="orderName" class="form-label">Name</label>
+              <input
+                type="text"
+                class="form-control"
+                id="orderName"
+                formControlName="orderName"
+              />
+            </div>
+            <div class="mb-3">
+              <label for="orderNumber" class="form-label">Phone Number</label>
+              <input
+                type="text"
+                class="form-control"
+                id="orderNumber"
+                formControlName="orderNumber"
+              />
+            </div>
+            <div class="mb-3">
+              <label for="starter">Starter</label>
+              <select
+                class="form-select"
+                id="starter"
+                formControlName="starterOrder"
+              >
+                <option>None</option>
+                <option
+                  *ngFor="let starter of restaurant.starter"
+                  [value]="starter.name"
+                >
+                  {{ starter.name }}
+                </option>
+              </select>
+            </div>
+            <div class="mb-3">
+              <label for="main">Main</label>
+              <select
+                class="form-select"
+                id="main"
+                formControlName="mainOrder"
+                name="mainOrder"
+              >
+                <option>None</option>
+                <option
+                  *ngFor="let main of restaurant.main"
+                  [value]="main.name"
+                >
+                  {{ main.name }}
+                </option>
+              </select>
+            </div>
+            <div class="mb-3">
+              <label for="dessert">Dessert</label>
+              <select
+                class="form-select"
+                id="dessert"
+                name="dessertOrder"
+                formControlName="dessertOrder"
+              >
+                <option>None</option>
+                <option
+                  *ngFor="let dessert of restaurant.dessert"
+                  [value]="dessert.name"
+                >
+                  {{ dessert.name }}
+                </option>
+              </select>
+            </div>
+            <button type="submit">Place Order</button>
+          </form>
+        </div>
       </div>
     </div>
   </div>
