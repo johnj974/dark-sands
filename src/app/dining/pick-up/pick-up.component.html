@@ -1,8 +1,8 @@
 <section>
   <div class="container">
     <div class="row">
-      <div class="col">
-        <h3>Pick Up</h3>
+      <div class="col-lg-6">
+        <h3>Pick Up Order</h3>
         <div class="order-form">
           <form [formGroup]="orderForm" (ngSubmit)="placeOrder()">
             <div class="mb-3">
@@ -12,6 +12,7 @@
                 class="form-control"
                 id="orderName"
                 formControlName="orderName"
+                #name
               />
             </div>
             <div class="mb-3">
@@ -29,6 +30,7 @@
                 class="form-select"
                 id="starter"
                 formControlName="starterOrder"
+                #starter
               >
                 <option>None</option>
                 <option
@@ -46,6 +48,7 @@
                 id="main"
                 formControlName="mainOrder"
                 name="mainOrder"
+                #main
               >
                 <option>None</option>
                 <option
@@ -63,6 +66,7 @@
                 id="dessert"
                 name="dessertOrder"
                 formControlName="dessertOrder"
+                #dessert
               >
                 <option>None</option>
                 <option
@@ -75,6 +79,33 @@
             </div>
             <button type="submit">Place Order</button>
           </form>
+        </div>
+      </div>
+      <div class="col-lg-6">
+        <h3>Order Confirmation</h3>
+        <div *ngIf="confirmCheck">
+          <table class="table">
+            <thead>
+              <tr>
+                <th scope="col">Name</th>
+                <th scope="col">Starter</th>
+                <th scope="col">Main</th>
+                <th scope="col">Dessert</th>
+              </tr>
+            </thead>
+            <tbody>
+              <tr>
+                <th scope="row">{{ name.value }}</th>
+                <td>{{ starter.value }}</td>
+                <td>{{ main.value }}</td>
+                <td>{{ dessert.value }}</td>
+              </tr>
+            </tbody>
+          </table>
+          <p>Total for this order is:</p>
+          <p>Order Number: {{ orderNumber }}</p>
+          <p>Available for pickup at: {{ pickupTime | date: "shortTime" }}</p>
+          <button class="btn btn-hotel" (click)="confirm()">Confirm</button>
         </div>
       </div>
     </div>

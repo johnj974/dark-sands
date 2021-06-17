@@ -3,7 +3,7 @@
     <div class="row">
       <div class="col">
         <h1>{{ requestedRestaurant.title }}</h1>
-        <button class="btn" (click)="backToRestaurant()">back</button>
+        <button class="btn btn-hotel" (click)="backToRestaurant()">back</button>
       </div>
     </div>
     <div class="row">
@@ -36,6 +36,6 @@
   </div>
 </section>
 <section>
-  <app-reservation></app-reservation>
+  <app-reservation [receivedParamId]="paramId"></app-reservation>
   <app-pick-up [receivedParamId]="paramId"></app-pick-up>
 </section>

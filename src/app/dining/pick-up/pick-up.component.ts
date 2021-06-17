@@ -1,5 +1,6 @@
 import { Component, Input, OnInit } from '@angular/core';
 import { FormControl, FormGroup, Validators } from '@angular/forms';
+import { OrderModel } from 'src/app/shared/models/order.model';
 import { RestaurantModel } from 'src/app/shared/models/restaurant.model';
 import { RestaurantService } from 'src/app/shared/services/restaurant.service';
 
@@ -10,9 +11,13 @@ import { RestaurantService } from 'src/app/shared/services/restaurant.service';
 })
 export class PickUpComponent implements OnInit {
   //.
+  confirmCheck = false;
   restaurant: RestaurantModel;
   orderForm: FormGroup;
   @Input() receivedParamId: number;
+  orderList: OrderModel[] = [];
+  orderNumber: number = Math.floor(Math.random() * 10000);
+  pickupTime;
 
   constructor(private restaurantService: RestaurantService) {}
 
@@ -34,6 +39,22 @@ export class PickUpComponent implements OnInit {
   }
 
   placeOrder() {
-    console.log(this.orderForm);
+    let newOrder = this.orderForm.value;
+    this.orderList.push(newOrder);
+    console.log(this.orderForm.value);
+    this.confirmCheck = true;
+    this.addThirty();
+  }
+
+  confirm() {
+    console.log(this.orderList);
+    this.confirmCheck = false;
+    this.orderForm.reset();
+  }
+
+  addThirty() {
+    this.pickupTime = new Date();
+    this.pickupTime.setMinutes(this.pickupTime.getMinutes() + 30);
+    return this.pickupTime;
   }
 }

@@ -2,7 +2,7 @@
   <div class="container py-5">
     <div class="row">
       <div class="col">
-        <h3>Reservation Form</h3>
+        <h3>{{ restaurant.title }} Reservation Form</h3>
         <div class="reservation-form">
           <form
             autocomplete="off"
@@ -16,6 +16,7 @@
                 class="form-control"
                 id="name"
                 formControlName="bookingName"
+                #name
               />
               <span
                 class="form-text small"
@@ -34,6 +35,7 @@
                 class="form-control"
                 id="bookingTime"
                 formControlName="bookingTime"
+                #time
               />
               <span
                 class="form-text small"
@@ -52,6 +54,7 @@
                 class="form-control"
                 id="bookingDate"
                 formControlName="bookingDate"
+                #date
               />
               <span
                 class="form-text small"
@@ -64,7 +67,7 @@
               </span>
             </div>
             <div class="mb-3">
-              <label for="number" class="form-label">Person Quantity</label>
+              <label for="number" class="form-label">Quantity (max-4)</label>
               <input
                 type="number"
                 class="form-control"
@@ -72,6 +75,7 @@
                 formControlName="bookingNumber"
                 max="4"
                 min="1"
+                #qty
               />
               <span
                 class="form-text small"
@@ -103,9 +107,14 @@
                 Please enter a valid Phone Number.
               </span>
             </div>
-            <button type="submit">Make Reservation</button>
+            <button class="btn" type="submit">Make Reservation</button>
           </form>
         </div>
+        <p *ngIf="reservation">
+          Reservation placed by {{ name.value }} for a table of
+          {{ qty.value }} at {{ time.value }} on
+          {{ date.value | date: "fullDate" }}
+        </p>
       </div>
     </div>
   </div>

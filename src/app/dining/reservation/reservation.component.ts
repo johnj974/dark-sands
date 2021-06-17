@@ -1,4 +1,4 @@
-import { Component, OnInit } from '@angular/core';
+import { Component, Input, OnInit } from '@angular/core';
 import { FormControl, FormGroup, Validators } from '@angular/forms';
 import { RestaurantModel } from 'src/app/shared/models/restaurant.model';
 import { RestaurantService } from 'src/app/shared/services/restaurant.service';
@@ -10,10 +10,12 @@ import { RestaurantService } from 'src/app/shared/services/restaurant.service';
 })
 export class ReservationComponent implements OnInit {
   //.
-
+  reservation = false;
+  @Input() receivedParamId: number;
+  restaurant: RestaurantModel;
   reservationForm: FormGroup;
 
-  constructor() {}
+  constructor(private restaurantService: RestaurantService) {}
 
   ngOnInit(): void {
     this.reservationForm = new FormGroup({
@@ -29,10 +31,17 @@ export class ReservationComponent implements OnInit {
         Validators.pattern('[0-9]{10}'),
       ]),
     });
+    this.restaurant = this.restaurantService.getRestaurant(
+      this.receivedParamId
+    );
   }
 
   makeReservation() {
     console.log(this.reservationForm.value);
-    this.reservationForm.reset();
+    this.reservation = true;
+    setTimeout(() => {
+      this.reservation = false;
+      this.reservationForm.reset();
+    }, 10000);
   }
 }
